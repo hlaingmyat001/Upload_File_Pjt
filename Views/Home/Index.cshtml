@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+   <form asp-controller="Home" asp-action="Import" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-4">
+            <input type="file" name="postedFile" id="postedFile" />
+        </div>
+        <div class="col-md-8">
+            <input type="submit" id="btnUpload" value="Import" />
+        </div>
+    </div>
+    <br/>
+    <div id="dvData"></div>
+</form>
+</div>
