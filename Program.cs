@@ -30,6 +30,11 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapControllerRoute(name: "api", pattern: "api/{controller=CSVApi}");
+
+app.MapControllerRoute(name: "api", pattern: "api/{controller=XMLApi}");
+
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
